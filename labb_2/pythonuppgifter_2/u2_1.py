@@ -19,7 +19,7 @@ def get_grade(score):
 
 ### 2.1.4
 def days_in_month(name_of_month):
-    months = ['januari', 'februari', 'mars', 'april', 'maj', 'juni',' juli', 'augusti', 'oktober', 'november', 'december']
+    months = ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'oktober', 'november', 'december']
     days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     return days[months.index(name_of_month)]
 
