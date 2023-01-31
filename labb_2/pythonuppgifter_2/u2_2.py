@@ -51,19 +51,19 @@ def create_number_to_number_list_for(start_number, end_number):
 
 # 2.2.4
 def get_max_while(integer_list):
-    max_value = -1
+    max_value = None
     i = 0
     while i < len(integer_list):
-        if integer_list[i] > max_value:
+        if max_value == None or integer_list[i] > max_value:
             max_value = integer_list[i]
         i += 1
 
     return max_value
 
 def get_max_for(integer_list):
-    max_value = -1
+    max_value = None
     for value in integer_list:
-        if value > max_value:
+        if max_value == None or value > max_value:
             max_value = value
 
     return max_value
