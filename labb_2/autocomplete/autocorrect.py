@@ -27,17 +27,8 @@ def autocomplete(input_word, words_reader):
 
     return best_candidate[0]
 
-def find_candidates(input_word, words_reader):
-    candidates = []
-    for word in words_reader:
-        if word[0][0:len(input_word)] == input_word:
-            candidates.append(word)
-
-    return candidates
-
 def candidate_with_highest_freq(candidates):
     sorted_candidates = sorted(candidates, key = lambda candidate : candidate[1], reverse=True)
     return sorted_candidates[0:3]
-
 
 main()

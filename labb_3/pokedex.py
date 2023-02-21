@@ -15,6 +15,7 @@ def get_json_as_dict(url):
 
 def get_pokemon_url(pokemon_name):
     data = get_json_as_dict(API_SERVER + "api/v2/pokemon")
+
     for pokemon in data["results"]:
         if pokemon["name"] == pokemon_name:
             return API_SERVER + pokemon["url"]
@@ -57,6 +58,11 @@ def get_ability_info(ability, language):
     return ability_info
 
 def main():
+    if len(sys.argv) == 1:
+        print("Enter the name of a pokemon to see its abilities.")
+    elif len(sys.argv) == 2:
+        language = "en"
+    else:sys
     pokemon_name = sys.argv[1].lower()
     language = sys.argv[2].lower()
 
@@ -78,5 +84,4 @@ def main():
     else:
         print("No information about '{}' was found.".format(sys.argv[1]))
 
-# test()
 main()
